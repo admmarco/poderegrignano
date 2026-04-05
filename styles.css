@@ -28,6 +28,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -37,10 +38,7 @@ body {
   line-height: 1.6;
   color: var(--color-ink);
   background: var(--color-bg);
-}
-
-main {
-  padding-right: var(--space-lg);
+  overflow-x: hidden;
 }
 
 img {
@@ -159,7 +157,6 @@ p:last-child {
   align-items: center;
   justify-content: flex-end;
   gap: 0.15rem 0.35rem;
-  border-left: 1px solid rgba(28, 25, 23, 0.2);
 }
 
 .nav-rail__list li {
