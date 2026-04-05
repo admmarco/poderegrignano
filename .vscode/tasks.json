@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Open to-do in browser",
+      "type": "shell",
+      "command": "xdg-open",
+      "args": ["${workspaceFolder}/todo.html"],
+      "problemMatcher": []
+    }
+  ]
+}

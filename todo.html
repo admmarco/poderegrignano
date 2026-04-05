@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Small to-do</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f4f0;
+      --card: #fff;
+      --text: #2c2a26;
+      --muted: #6b6560;
+      --accent: #3d5a4a;
+      --accent-hover: #324a3d;
+      --line: #e5e2dc;
+      --done: #9a948b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Outfit", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem 1.25rem;
+    }
+    .wrap {
+      max-width: 28rem;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 0 0 0.25rem;
+      letter-spacing: -0.02em;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0 0 1.5rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 1px 3px rgba(44, 42, 38, 0.06);
+      border: 1px solid var(--line);
+    }
+    .row {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    input[type="text"] {
+      flex: 1;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.55rem 0.75rem;
+      font: inherit;
+      font-size: 0.95rem;
+    }
+    input[type="text"]:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+      border-color: transparent;
+    }
+    button.add {
+      border: none;
+      border-radius: 8px;
+      padding: 0.55rem 1rem;
+      font: inherit;
+      font-weight: 500;
+      font-size: 0.9rem;
+      background: var(--accent);
+      color: #fff;
+      cursor: pointer;
+    }
+    button.add:hover {
+      background: var(--accent-hover);
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.95rem;
+    }
+    li:last-child { border-bottom: none; }
+    li label {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      cursor: pointer;
+      min-width: 0;
+    }
+    li input[type="checkbox"] {
+      width: 1.05rem;
+      height: 1.05rem;
+      accent-color: var(--accent);
+      flex-shrink: 0;
+    }
+    li span.text {
+      word-break: break-word;
+    }
+    li.done span.text {
+      color: var(--done);
+      text-decoration: line-through;
+    }
+    button.del {
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 0.8rem;
+      cursor: pointer;
+      padding: 0.25rem 0.35rem;
+      border-radius: 4px;
+    }
+    button.del:hover {
+      color: #c45c4a;
+      background: rgba(196, 92, 74, 0.08);
+    }
+    .empty {
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 1rem 0 0.25rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 1.25rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .back:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>To-do</h1>
+    <p class="sub">Add items, check them off, remove when done. Saved in this browser.</p>
+    <div class="card">
+      <form class="row" id="form" autocomplete="off">
+        <input type="text" id="input" placeholder="What needs doing?" maxlength="200" aria-label="New task" />
+        <button type="submit" class="add">Add</button>
+      </form>
+      <ul id="list" aria-live="polite"></ul>
+      <p class="empty" id="empty" hidden>Nothing here yet.</p>
+    </div>
+    <a class="back" href="index.html">← Back to site</a>
+  </div>
+  <script>
+    (function () {
+      var KEY = "small-todo-v1";
+      var listEl = document.getElementById("list");
+      var emptyEl = document.getElementById("empty");
+      var inputEl = document.getElementById("input");
+      var formEl = document.getElementById("form");
+
+      function load() {
+        try {
+          var raw = localStorage.getItem(KEY);
+          var data = raw ? JSON.parse(raw) : [];
+          return Array.isArray(data) ? data : [];
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function save(items) {
+        localStorage.setItem(KEY, JSON.stringify(items));
+      }
+
+      function render() {
+        var items = load();
+        listEl.innerHTML = "";
+        emptyEl.hidden = items.length > 0;
+        items.forEach(function (item, i) {
+          var li = document.createElement("li");
+          if (item.done) li.className = "done";
+
+          var label = document.createElement("label");
+          var cb = document.createElement("input");
+          cb.type = "checkbox";
+          cb.checked = item.done;
+          cb.addEventListener("change", function () {
+            var all = load();
+            if (all[i]) {
+              all[i].done = cb.checked;
+              save(all);
+              render();
+            }
+          });
+          var span = document.createElement("span");
+          span.className = "text";
+          span.textContent = item.text;
+          label.appendChild(cb);
+          label.appendChild(span);
+          li.appendChild(label);
+
+          var del = document.createElement("button");
+          del.type = "button";
+          del.className = "del";
+          del.textContent = "Remove";
+          del.addEventListener("click", function () {
+            var all = load();
+            all.splice(i, 1);
+            save(all);
+            render();
+          });
+          li.appendChild(del);
+
+          listEl.appendChild(li);
+        });
+      }
+
+      formEl.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var text = inputEl.value.trim();
+        if (!text) return;
+        var items = load();
+        items.push({ text: text, done: false });
+        save(items);
+        inputEl.value = "";
+        inputEl.focus();
+        render();
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>
