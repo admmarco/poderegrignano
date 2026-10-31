@@ -3,84 +3,236 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Podere Grignano — Holiday Home</title>
+
+  <!-- ══ Primary SEO ══ -->
+  <title>Podere Grignano — Holiday Home in Tuscany | Volterra & San Gimignano</title>
+  <meta name="description" content="A medieval farmhouse on a rolling hill between Volterra and San Gimignano. Olive grove, vineyard and stunning Tuscan views. Book your stay at Podere Grignano." />
+  <meta name="keywords" content="holiday home Tuscany, Podere Grignano, vacation rental Volterra, San Gimignano holiday, Tuscany farmhouse, agriturismo Tuscany" />
+  <link rel="canonical" href="https://www.poderegrignano.com/" />
+
+  <!-- ══ Open Graph (Facebook, WhatsApp, LinkedIn previews) ══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.poderegrignano.com/" />
+  <meta property="og:title"       content="Podere Grignano — Holiday Home in Tuscany" />
+  <meta property="og:description" content="A medieval farmhouse between Volterra and San Gimignano. Olive grove, vineyard and stunning Tuscan vistas." />
+  <meta property="og:image"       content="https://www.poderegrignano.com/images/slide-29.jpg" />
+  <meta property="og:locale"      content="en_GB" />
+  <meta property="og:site_name"   content="Podere Grignano" />
+
+  <!-- ══ Twitter / X card ══ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Podere Grignano — Holiday Home in Tuscany" />
+  <meta name="twitter:description" content="A medieval farmhouse between Volterra and San Gimignano. Olive grove, vineyard and stunning Tuscan vistas." />
+  <meta name="twitter:image"       content="https://www.poderegrignano.com/images/slide-29.jpg" />
+
+  <!-- ══ Structured data — Vacation Rental (JSON-LD) ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Podere Grignano",
+    "description": "A medieval farmhouse on a rolling hill between Volterra and San Gimignano, Tuscany. Olive grove, vineyard and stunning Tuscan views.",
+    "url": "https://www.poderegrignano.com/",
+    "image": "https://www.poderegrignano.com/images/slide-29.jpg",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Volterra",
+      "addressRegion": "Tuscany",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.4111,
+      "longitude": 10.9420
+    },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Free parking",     "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi",            "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Olive grove",      "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Vineyard",         "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Outdoor terrace",  "value": true }
+    ],
+    "numberOfRooms": 2,
+    "checkinTime": "15:00",
+    "checkoutTime": "11:00",
+    "telephone": "+390000000000",
+    "email": "hello@poderegrignano.com"
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='18' y='47' width='64' height='45' rx='3' fill='%232d5a4a'/><polygon points='50,6 95,47 5,47' fill='%232d5a4a'/><rect x='38' y='67' width='24' height='25' rx='2' fill='%23faf8f5'/></svg>" />
+  <link rel="preload" as="image" href="images/webp/slide-29-lg.webp" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar" id="scroll-progress-bar"></div></div>
   <nav class="nav-rail" aria-label="Main navigation">
-    <a class="nav-rail__brand" href="#top">Podere Grignano</a>
+    <a class="nav-rail__brand" href="#top">
+      Podere Grignano
+      <span class="nav-rail__tagline">A medieval farmhouse in the heart of Tuscany</span>
+    </a>
     <ul class="nav-rail__list">
       <li><a href="#about">About</a></li>
       <li><a href="#amenities">Amenities</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#location">Location</a></li>
-      <li><a class="nav-rail__cta" href="#book">Book</a></li>
+      <li><a class="nav-rail__cta" href="#book">Check dates</a></li>
     </ul>
   </nav>
 
   <main id="top">
     <section class="hero">
-      <div class="hero-bg" role="img" aria-label="Podere Grignano — stone farmhouse and garden"></div>
+      <div class="hero-carousel" aria-hidden="true">
+        <div class="hero-carousel__track" id="carousel-track">
+          <div class="hero-carousel__slide" style="background-image:url('images/webp/slide-29-lg.webp')" data-bg="images/webp/slide-29-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-01-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-02-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-03-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-04-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-05-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-06-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-07-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-08-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-09-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-10-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-11-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-12-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-13-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-14-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-15-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-16-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-17-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-19-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-20-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-21-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-22-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-23-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-24-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-25-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-26-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-27-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-28-lg.webp"></div>
+          <div class="hero-carousel__slide" data-bg="images/webp/slide-30-lg.webp"></div>
+        </div>
+        <div class="hero-carousel__overlay"></div>
+      </div>
+
+      <!-- Filmstrip -->
+      <div class="hero-filmstrip" id="hero-filmstrip" aria-hidden="true">
+        <div class="hero-filmstrip__track">
+          <button class="filmstrip-thumb" data-index="0"  aria-label="Go to photo 1"><img data-src="images/webp/slide-29-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="1"  aria-label="Go to photo 2"><img data-src="images/webp/slide-01-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="2"  aria-label="Go to photo 3"><img data-src="images/webp/slide-02-sm.webp" width="480" height="320" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="3"  aria-label="Go to photo 4"><img data-src="images/webp/slide-03-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="4"  aria-label="Go to photo 5"><img data-src="images/webp/slide-04-sm.webp" width="480" height="320" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="5"  aria-label="Go to photo 6"><img data-src="images/webp/slide-05-sm.webp" width="480" height="300" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="6"  aria-label="Go to photo 7"><img data-src="images/webp/slide-06-sm.webp" width="480" height="320" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="7"  aria-label="Go to photo 8"><img data-src="images/webp/slide-07-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="8"  aria-label="Go to photo 9"><img data-src="images/webp/slide-08-sm.webp" width="480" height="320" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="9"  aria-label="Go to photo 10"><img data-src="images/webp/slide-09-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="10" aria-label="Go to photo 11"><img data-src="images/webp/slide-10-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="11" aria-label="Go to photo 12"><img data-src="images/webp/slide-11-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="12" aria-label="Go to photo 13"><img data-src="images/webp/slide-12-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="13" aria-label="Go to photo 14"><img data-src="images/webp/slide-13-sm.webp" width="480" height="320" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="14" aria-label="Go to photo 15"><img data-src="images/webp/slide-14-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="15" aria-label="Go to photo 16"><img data-src="images/webp/slide-15-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="16" aria-label="Go to photo 17"><img data-src="images/webp/slide-16-sm.webp" width="480" height="320" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="17" aria-label="Go to photo 18"><img data-src="images/webp/slide-17-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="19" aria-label="Go to photo 20"><img data-src="images/webp/slide-19-sm.webp" width="480" height="320" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="20" aria-label="Go to photo 21"><img data-src="images/webp/slide-20-sm.webp" width="480" height="320" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="21" aria-label="Go to photo 22"><img data-src="images/webp/slide-21-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="22" aria-label="Go to photo 23"><img data-src="images/webp/slide-22-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="23" aria-label="Go to photo 24"><img data-src="images/webp/slide-23-sm.webp" width="480" height="320" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="24" aria-label="Go to photo 25"><img data-src="images/webp/slide-24-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="25" aria-label="Go to photo 26"><img data-src="images/webp/slide-25-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="26" aria-label="Go to photo 27"><img data-src="images/webp/slide-26-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="27" aria-label="Go to photo 28"><img data-src="images/webp/slide-27-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="28" aria-label="Go to photo 29"><img data-src="images/webp/slide-28-sm.webp" width="480" height="360" alt="" /></button>
+          <button class="filmstrip-thumb" data-index="29" aria-label="Go to photo 30"><img data-src="images/webp/slide-30-sm.webp" width="480" height="360" alt="" /></button>
+        </div>
+      </div>
+
+      <div class="hero-controls">
+        <button class="hero-ctrl hero-ctrl--film"  id="carousel-film"  aria-label="Show all photos" aria-expanded="false">⊞</button>
+        <button class="hero-ctrl hero-ctrl--prev"  id="carousel-prev"  aria-label="Previous photo">&#8592;</button>
+        <button class="hero-ctrl hero-ctrl--pause" id="carousel-pause" aria-label="Pause slideshow">&#9646;&#9646;</button>
+        <button class="hero-ctrl hero-ctrl--next"  id="carousel-next"  aria-label="Next photo">&#8594;</button>
+      </div>
+
       <div class="hero-inner">
-        <p class="hero-tag">Tuscany · Holiday home</p>
-        <h1>Where mornings slow down</h1>
-        <p class="hero-lead">
-          A quiet podere among olive groves and rolling hills—room for long breakfasts on the terrace,
-          lazy afternoons by the pool, and evenings under the stars.
-        </p>
+        <div class="hero-copy">
+          <h1>Your own beautiful piece of Tuscany</h1>
+          <p class="hero-lead">
+            Set on a rolling hill between Volterra (17 km) and San Gimignano (21 km) — this converted barn
+            sits among Podere Grignano's own olive grove and vineyard. Enjoy long breakfasts on the terrace,
+            views of a typical Tuscan cypress lane, beautiful Tuscan vistas and quiet evenings under the stars.
+          </p>
+        </div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#book">Check availability</a>
           <a class="btn btn-ghost" href="#gallery">View the space</a>
         </div>
       </div>
+      <a href="#about" class="hero-scroll-hint" aria-label="Scroll to learn more">
+        <span class="hero-scroll-hint__text">Scroll</span>
+        <span class="hero-scroll-hint__chevron" aria-hidden="true"></span>
+      </a>
     </section>
 
-    <section class="section section-about" id="about">
+    <section class="section section-about" id="about" data-reveal>
       <div class="container split">
         <div class="split-text">
-          <h2>Your home away from home</h2>
+          <span class="eyebrow">The Property</span>
+          <h2>The House</h2>
           <p>
-            Comfortable rooms, an open kitchen, and a shaded terrace that catches the breeze all day.
-            Rustic stone and wood, modern comforts—so the landscape stays the star.
+            A lovingly restored medieval barn set on a gentle hill at Podere Grignano.
+          </p>
+          <p>
+            Stone walls that have stood for centuries, original beams, and modern comforts blend seamlessly. Cosy spaces and a generous terrace open onto sweeping views of the Tuscan countryside, a classic cypress lane, and our own olive grove and vineyard.
+          </p>
+          <p>
+            Here, every detail invites you to slow down — from the morning light to quiet evenings under a sky full of stars.
           </p>
           <ul class="facts">
-            <li><strong>3</strong> bedrooms</li>
-            <li><strong>2</strong> bathrooms</li>
-            <li><strong>Private</strong> pool &amp; parking</li>
-            <li><strong>Near</strong> Volterra &amp; San Gimignano</li>
+            <li><strong>2</strong> bedrooms</li>
+            <li><strong>1</strong> bathroom</li>
+            <li><strong>Private</strong> parking</li>
+            <li><strong>17–21 km</strong> Volterra &amp; San Gimignano</li>
           </ul>
         </div>
         <figure class="split-media">
           <img
-            src="images/about.jpg"
+            src="images/webp/about-lg.webp"
             alt="Living space at Podere Grignano"
-            width="900"
-            height="600"
+            width="1024"
+            height="683"
             loading="lazy"
           />
         </figure>
       </div>
     </section>
 
-    <section class="section section-amenities" id="amenities">
+    <section class="section section-amenities" id="amenities" data-reveal>
       <div class="container">
         <header class="section-head">
+          <span class="eyebrow">What's included</span>
           <h2>Everything you need</h2>
-          <p>Comforts we’d want on our own holiday—nothing fussy, just thoughtful.</p>
+          <p>Comforts we’d want on our own holiday — nothing fussy, just thoughtful.</p>
         </header>
         <ul class="amenity-grid">
           <li>
             <span class="amenity-icon" aria-hidden="true">◇</span>
             <h3>Fully equipped kitchen</h3>
-            <p>Coffee, cookware, and a proper dining table for slow meals.</p>
+            <p>Coffee, cookware, dishwasher, and a proper dining table for slow meals.</p>
           </li>
           <li>
             <span class="amenity-icon" aria-hidden="true">◇</span>
             <h3>Fast Wi‑Fi</h3>
-            <p>Reliable enough if you need to check in—easy to ignore if you don’t.</p>
+            <p>Stay connected when you need to — or leave the laptop closed and let Tuscany do its thing.</p>
           </li>
           <li>
             <span class="amenity-icon" aria-hidden="true">◇</span>
@@ -90,121 +242,267 @@
           <li>
             <span class="amenity-icon" aria-hidden="true">◇</span>
             <h3>Outdoor living</h3>
-            <p>Loungers, a covered dining area, and a grill for warm evenings.</p>
+            <p>Loungers, a dining area, and a wood-fired grill — perfect for long evenings outside with beautiful Tuscan vistas stretching to the horizon.</p>
           </li>
           <li>
             <span class="amenity-icon" aria-hidden="true">◇</span>
             <h3>Family friendly</h3>
-            <p>High chair and travel cot on request; shallow end in the pool.</p>
+            <p>High chair and travel cot available on request.</p>
           </li>
           <li>
             <span class="amenity-icon" aria-hidden="true">◇</span>
-            <h3>Local tips</h3>
-            <p>Our curated guide: bakeries, hikes, secret coves, and where to buy wine.</p>
+            <h3>Airconditioning</h3>
+            <p>Both bedrooms have airconditioning.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="section section-gallery" id="gallery">
+    <section class="section section-gallery" id="gallery" data-reveal>
       <div class="container">
         <header class="section-head">
-          <h2>Around the house</h2>
-          <p>Sunlit rooms, garden, and views of the podere.</p>
+          <span class="eyebrow">Gallery</span>
+          <h2>Explore Podere Grignano</h2>
+          <p>Click any photo to enlarge.</p>
         </header>
-        <div class="gallery-grid">
-          <figure class="gallery-item gallery-item--large">
-            <img
-              src="images/gallery-01.jpg"
-              alt="Podere Grignano"
-              width="1200"
-              height="800"
-              loading="lazy"
-            />
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="images/gallery-02.jpg"
-              alt="Podere Grignano"
-              width="800"
-              height="600"
-              loading="lazy"
-            />
-          </figure>
-          <figure class="gallery-item">
-            <img
-              src="images/gallery-03.jpg"
-              alt="Podere Grignano"
-              width="800"
-              height="600"
-              loading="lazy"
-            />
-          </figure>
-          <figure class="gallery-item gallery-item--wide">
-            <img
-              src="images/gallery-04.jpg"
-              alt="Podere Grignano"
-              width="1200"
-              height="500"
-              loading="lazy"
-            />
-          </figure>
+
+        <!-- Filter tabs -->
+        <div class="gallery-filters" role="tablist" aria-label="Filter gallery">
+          <button class="gallery-filter is-active" data-filter="all"         role="tab" aria-selected="true">All</button>
+          <button class="gallery-filter" data-filter="house"        role="tab" aria-selected="false">House</button>
+          <button class="gallery-filter" data-filter="garden"       role="tab" aria-selected="false">Garden</button>
+          <button class="gallery-filter" data-filter="vistas"       role="tab" aria-selected="false">Vistas</button>
+          <button class="gallery-filter" data-filter="playground"   role="tab" aria-selected="false">Playground</button>
+          <button class="gallery-filter" data-filter="volterra"     role="tab" aria-selected="false">Volterra</button>
+          <button class="gallery-filter" data-filter="sangimignano" role="tab" aria-selected="false">San Gimignano</button>
+          <button class="gallery-filter" data-filter="siena"        role="tab" aria-selected="false">Siena</button>
+          <button class="gallery-filter" data-filter="pisa"         role="tab" aria-selected="false">Pisa</button>
+          <button class="gallery-filter" data-filter="florence"     role="tab" aria-selected="false">Florence</button>
+        </div>
+
+        <div class="photo-grid" id="photo-grid">
+
+          <!-- House: exterior + all interior rooms -->
+          <div class="photo-grid__label" data-label-for="house">House</div>
+          <button class="photo-grid__item" data-category="house" data-src="images/webp/slide-29-lg.webp" aria-label="View photo"><img src="images/webp/slide-29-sm.webp" width="480" height="360" alt="House exterior" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="house" data-src="images/webp/slide-15-lg.webp" aria-label="View photo"><img src="images/webp/slide-15-sm.webp" width="480" height="360" alt="Podere Grignano house framed by cypress trees" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="house" data-src="images/webp/slide-17-lg.webp" aria-label="View photo"><img src="images/webp/slide-17-sm.webp" width="480" height="360" alt="Podere Grignano house and terrace" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="house" data-src="images/webp/slide-02-lg.webp" aria-label="View photo"><img src="images/webp/slide-02-sm.webp" width="480" height="320" alt="Master bedroom" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="house" data-src="images/webp/slide-20-lg.webp" aria-label="View photo"><img src="images/webp/slide-20-sm.webp" width="480" height="320" alt="Twin bedroom" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="house" data-src="images/webp/slide-03-lg.webp" aria-label="View photo"><img src="images/webp/slide-03-sm.webp" width="480" height="360" alt="Kitchen and living room" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="house" data-src="images/webp/slide-04-lg.webp" aria-label="View photo"><img src="images/webp/slide-04-sm.webp" width="480" height="320" alt="Living room and kitchen" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="house" data-src="images/webp/slide-21-lg.webp" aria-label="View photo"><img src="images/webp/slide-21-sm.webp" width="480" height="360" alt="Dining area" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="house" data-src="images/webp/slide-19-lg.webp" aria-label="View photo"><img src="images/webp/slide-19-sm.webp" width="480" height="320" alt="Bathroom" loading="lazy" decoding="async" /></button>
+
+          <!-- Garden: outdoor grounds of the property -->
+          <div class="photo-grid__label" data-label-for="garden">Garden</div>
+          <button class="photo-grid__item" data-category="garden" data-src="images/webp/slide-10-lg.webp" aria-label="View photo"><img src="images/webp/slide-10-sm.webp" width="480" height="360" alt="Garden" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="garden" data-src="images/webp/slide-26-lg.webp" aria-label="View photo"><img src="images/webp/slide-26-sm.webp" width="480" height="360" alt="Hammock in the garden" loading="lazy" decoding="async" /></button>
+
+          <!-- Vistas: Tuscan landscapes and views from/around the property -->
+          <div class="photo-grid__label" data-label-for="vistas">Vistas</div>
+          <button class="photo-grid__item" data-category="vistas" data-src="images/webp/slide-05-lg.webp" aria-label="View photo"><img src="images/webp/slide-05-sm.webp" width="480" height="300" alt="Tuscan landscape" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="vistas" data-src="images/webp/slide-06-lg.webp" aria-label="View photo"><img src="images/webp/slide-06-sm.webp" width="480" height="320" alt="Vineyard and hills" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="vistas" data-src="images/webp/slide-07-lg.webp" aria-label="View photo"><img src="images/webp/slide-07-sm.webp" width="480" height="360" alt="Sunset over the hills" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="vistas" data-src="images/webp/slide-12-lg.webp" aria-label="View photo"><img src="images/webp/slide-12-sm.webp" width="480" height="360" alt="Flower fields" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="vistas" data-src="images/webp/slide-13-lg.webp" aria-label="View photo"><img src="images/webp/slide-13-sm.webp" width="480" height="320" alt="Olive grove and farmhouse" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="vistas" data-src="images/webp/slide-22-lg.webp" aria-label="View photo"><img src="images/webp/slide-22-sm.webp" width="480" height="360" alt="Rolling hills with cypresses" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="vistas" data-src="images/webp/slide-25-lg.webp" aria-label="View photo"><img src="images/webp/slide-25-sm.webp" width="480" height="360" alt="View over the olive grove" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="vistas" data-src="images/webp/slide-27-lg.webp" aria-label="View photo"><img src="images/webp/slide-27-sm.webp" width="480" height="360" alt="Panoramic Tuscan view" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="vistas" data-src="images/webp/slide-28-lg.webp" aria-label="View photo"><img src="images/webp/slide-28-sm.webp" width="480" height="360" alt="Panoramic view with olive grove" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="vistas" data-src="images/webp/slide-30-lg.webp" aria-label="View photo"><img src="images/webp/slide-30-sm.webp" width="480" height="360" alt="Winding road through Tuscany" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="vistas" data-src="images/webp/volterra-03-lg.webp" aria-label="View photo"><img src="images/webp/volterra-03-sm.webp" width="480" height="270" alt="Poppies in the wheat fields" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="vistas" data-src="images/webp/volterra-04-lg.webp" aria-label="View photo"><img src="images/webp/volterra-04-sm.webp" width="480" height="270" alt="Tuscan landscape" loading="lazy" decoding="async" /></button>
+
+          <!-- Playground: play equipment and activities -->
+          <div class="photo-grid__label" data-label-for="playground">Playground</div>
+          <button class="photo-grid__item" data-category="playground" data-src="images/webp/slide-09-lg.webp" aria-label="View photo"><img src="images/webp/slide-09-sm.webp" width="480" height="360" alt="Swings" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="playground" data-src="images/webp/slide-11-lg.webp" aria-label="View photo"><img src="images/webp/slide-11-sm.webp" width="480" height="360" alt="Table tennis" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="playground" data-src="images/webp/slide-24-lg.webp" aria-label="View photo"><img src="images/webp/slide-24-sm.webp" width="480" height="360" alt="Seesaw" loading="lazy" decoding="async" /></button>
+
+          <!-- Volterra -->
+          <div class="photo-grid__label" data-label-for="volterra">Volterra</div>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-07-lg.webp" aria-label="View photo"><img src="images/webp/volterra-07-sm.webp" width="480" height="231" alt="Volterra — Piazza dei Priori" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/slide-01-lg.webp" aria-label="View photo"><img src="images/webp/slide-01-sm.webp" width="480" height="360" alt="Volterra street" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-01-lg.webp" aria-label="View photo"><img src="images/webp/volterra-01-sm.webp" width="480" height="360" alt="Volterra — wisteria over the rooftops" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-05-lg.webp" aria-label="View photo"><img src="images/webp/volterra-05-sm.webp" width="480" height="360" alt="Volterra — rooftops at sunset" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-06-lg.webp" aria-label="View photo"><img src="images/webp/volterra-06-sm.webp" width="480" height="319" alt="Volterra — panoramic city view" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-08-lg.webp" aria-label="View photo"><img src="images/webp/volterra-08-sm.webp" width="480" height="357" alt="Volterra — Via Bonparenti street" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-09-lg.webp" aria-label="View photo"><img src="images/webp/volterra-09-sm.webp" width="321" height="480" alt="Volterra — archway over a narrow street" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-10-lg.webp" aria-label="View photo"><img src="images/webp/volterra-10-sm.webp" width="480" height="286" alt="Volterra — historic centre detail" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-11-lg.webp" aria-label="View photo"><img src="images/webp/volterra-11-sm.webp" width="480" height="360" alt="Volterra — arched medieval alley" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-12-lg.webp" aria-label="View photo"><img src="images/webp/volterra-12-sm.webp" width="480" height="360" alt="Volterra — Piazza dei Priori panorama" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-13-lg.webp" aria-label="View photo"><img src="images/webp/volterra-13-sm.webp" width="480" height="360" alt="Volterra — Piazza dei Priori" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-14-lg.webp" aria-label="View photo"><img src="images/webp/volterra-14-sm.webp" width="480" height="337" alt="Volterra — Porta all'Arco" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-15-lg.webp" aria-label="View photo"><img src="images/webp/volterra-15-sm.webp" width="480" height="320" alt="Volterra — Porta all'Arco from inside" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-16-lg.webp" aria-label="View photo"><img src="images/webp/volterra-16-sm.webp" width="480" height="302" alt="Volterra — hilltop panorama" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-17-lg.webp" aria-label="View photo"><img src="images/webp/volterra-17-sm.webp" width="480" height="300" alt="Volterra — rooftops and towers" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-18-lg.webp" aria-label="View photo"><img src="images/webp/volterra-18-sm.webp" width="480" height="320" alt="Volterra — main street with shops" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-19-lg.webp" aria-label="View photo"><img src="images/webp/volterra-19-sm.webp" width="287" height="480" alt="Volterra — narrow stone street" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-20-lg.webp" aria-label="View photo"><img src="images/webp/volterra-20-sm.webp" width="480" height="360" alt="Volterra — Via Ricciarelli" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-21-lg.webp" aria-label="View photo"><img src="images/webp/volterra-21-sm.webp" width="365" height="480" alt="Volterra — street in the historic centre" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-22-lg.webp" aria-label="View photo"><img src="images/webp/volterra-22-sm.webp" width="480" height="396" alt="Volterra — Roman theatre" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-23-lg.webp" aria-label="View photo"><img src="images/webp/volterra-23-sm.webp" width="319" height="480" alt="Volterra — Piazza dei Priori square" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="volterra" data-src="images/webp/volterra-24-lg.webp" aria-label="View photo"><img src="images/webp/volterra-24-sm.webp" width="480" height="327" alt="Volterra — Roman theatre ruins" loading="lazy" decoding="async" /></button>
+
+          <!-- San Gimignano -->
+          <div class="photo-grid__label" data-label-for="sangimignano">San Gimignano</div>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/slide-23-lg.webp" aria-label="View photo"><img src="images/webp/slide-23-sm.webp" width="480" height="320" alt="San Gimignano panorama" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-01-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-01-sm.webp" width="480" height="320" alt="San Gimignano towers" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-02-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-02-sm.webp" width="480" height="360" alt="San Gimignano — medieval skyline" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-03-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-03-sm.webp" width="480" height="289" alt="San Gimignano twin towers" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-04-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-04-sm.webp" width="480" height="360" alt="San Gimignano — narrow medieval street with laundry" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-05-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-05-sm.webp" width="360" height="480" alt="San Gimignano — Porta San Matteo" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-06-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-06-sm.webp" width="316" height="480" alt="San Gimignano — Via San Giovanni and tower" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-07-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-07-sm.webp" width="360" height="480" alt="San Gimignano — Via San Giovanni street scene" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-08-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-08-sm.webp" width="480" height="320" alt="San Gimignano — quiet brick street with plants" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-09-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-09-sm.webp" width="480" height="360" alt="San Gimignano — street in the historic centre" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-10-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-10-sm.webp" width="480" height="320" alt="San Gimignano towers" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-11-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-11-sm.webp" width="322" height="480" alt="San Gimignano — Piazza della Cisterna" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-12-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-12-sm.webp" width="480" height="360" alt="San Gimignano — Via San Giovanni and Torre Grossa" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-13-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-13-sm.webp" width="360" height="480" alt="San Gimignano — Porta San Giovanni" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="sangimignano" data-src="images/webp/sangimignano-14-lg.webp" aria-label="View photo"><img src="images/webp/sangimignano-14-sm.webp" width="480" height="364" alt="San Gimignano — Via San Giovanni looking toward the towers" loading="lazy" decoding="async" /></button>
+
+          <!-- Siena -->
+          <div class="photo-grid__label" data-label-for="siena">Siena</div>
+          <button class="photo-grid__item" data-category="siena" data-src="images/webp/siena-01-lg.webp" aria-label="View photo"><img src="images/webp/siena-01-sm.webp" width="282" height="480" alt="Siena — Piazza del Campo" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="siena" data-src="images/webp/siena-02-lg.webp" aria-label="View photo"><img src="images/webp/siena-02-sm.webp" width="480" height="320" alt="Siena — Piazza del Campo and Palazzo Pubblico" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="siena" data-src="images/webp/siena-03-lg.webp" aria-label="View photo"><img src="images/webp/siena-03-sm.webp" width="480" height="320" alt="Siena — historic centre" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="siena" data-src="images/webp/siena-04-lg.webp" aria-label="View photo"><img src="images/webp/siena-04-sm.webp" width="282" height="480" alt="Siena — Torre del Mangia" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="siena" data-src="images/webp/siena-05-lg.webp" aria-label="View photo"><img src="images/webp/siena-05-sm.webp" width="394" height="480" alt="Siena — Duomo" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="siena" data-src="images/webp/siena-06-lg.webp" aria-label="View photo"><img src="images/webp/siena-06-sm.webp" width="480" height="369" alt="Siena — cathedral exterior" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="siena" data-src="images/webp/siena-07-lg.webp" aria-label="View photo"><img src="images/webp/siena-07-sm.webp" width="480" height="320" alt="Siena — Piazza del Campo from Torre del Mangia" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="siena" data-src="images/webp/siena-08-lg.webp" aria-label="View photo"><img src="images/webp/siena-08-sm.webp" width="327" height="480" alt="Siena — Duomo campanile" loading="lazy" decoding="async" /></button>
+
+          <!-- Pisa -->
+          <div class="photo-grid__label" data-label-for="pisa">Pisa</div>
+          <button class="photo-grid__item" data-category="pisa" data-src="images/webp/pisa-01-lg.webp" aria-label="View photo"><img src="images/webp/pisa-01-sm.webp" width="230" height="480" alt="Pisa — Leaning Tower" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="pisa" data-src="images/webp/pisa-02-lg.webp" aria-label="View photo"><img src="images/webp/pisa-02-sm.webp" width="480" height="300" alt="Pisa — Duomo and Leaning Tower at sunrise" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="pisa" data-src="images/webp/pisa-03-lg.webp" aria-label="View photo"><img src="images/webp/pisa-03-sm.webp" width="480" height="162" alt="Pisa — Arno river panorama" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="pisa" data-src="images/webp/pisa-04-lg.webp" aria-label="View photo"><img src="images/webp/pisa-04-sm.webp" width="480" height="320" alt="Pisa — cathedral, baptistery and skyline" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="pisa" data-src="images/webp/pisa-05-lg.webp" aria-label="View photo"><img src="images/webp/pisa-05-sm.webp" width="431" height="480" alt="Pisa — San Michele in Borgo, historic centre" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="pisa" data-src="images/webp/pisa-07-lg.webp" aria-label="View photo"><img src="images/webp/pisa-07-sm.webp" width="480" height="324" alt="Pisa — Lungarno along the Arno" loading="lazy" decoding="async" /></button>
+
+          <!-- Florence -->
+          <div class="photo-grid__label" data-label-for="florence">Florence</div>
+          <button class="photo-grid__item" data-category="florence" data-src="images/webp/florence-01-lg.webp" aria-label="View photo"><img src="images/webp/florence-01-sm.webp" width="480" height="348" alt="Florence — Duomo from Piazzale Michelangelo" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="florence" data-src="images/webp/florence-02-lg.webp" aria-label="View photo"><img src="images/webp/florence-02-sm.webp" width="480" height="360" alt="Florence — cathedral at night" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="florence" data-src="images/webp/florence-03-lg.webp" aria-label="View photo"><img src="images/webp/florence-03-sm.webp" width="480" height="367" alt="Florence — Ponte Vecchio at dusk" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="florence" data-src="images/webp/florence-04-lg.webp" aria-label="View photo"><img src="images/webp/florence-04-sm.webp" width="480" height="270" alt="Florence — houses along the Arno" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="florence" data-src="images/webp/florence-05-lg.webp" aria-label="View photo"><img src="images/webp/florence-05-sm.webp" width="255" height="480" alt="Florence — Palazzo Vecchio tower" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="florence" data-src="images/webp/florence-06-lg.webp" aria-label="View photo"><img src="images/webp/florence-06-sm.webp" width="480" height="257" alt="Florence — city skyline" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="florence" data-src="images/webp/florence-07-lg.webp" aria-label="View photo"><img src="images/webp/florence-07-sm.webp" width="480" height="453" alt="Florence — Basilica di Santa Croce from Giotto's bell tower" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="florence" data-src="images/webp/florence-08-lg.webp" aria-label="View photo"><img src="images/webp/florence-08-sm.webp" width="480" height="365" alt="Florence — Basilica di Santa Croce" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="florence" data-src="images/webp/florence-09-lg.webp" aria-label="View photo"><img src="images/webp/florence-09-sm.webp" width="360" height="480" alt="Florence — Boboli Gardens" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="florence" data-src="images/webp/florence-10-lg.webp" aria-label="View photo"><img src="images/webp/florence-10-sm.webp" width="360" height="480" alt="Florence — Palazzo della Signoria (Palazzo Vecchio)" loading="lazy" decoding="async" /></button>
+          <button class="photo-grid__item" data-category="florence" data-src="images/webp/florence-11-lg.webp" aria-label="View photo"><img src="images/webp/florence-11-sm.webp" width="480" height="103" alt="Florence — panorama from Piazzale Michelangelo" loading="lazy" decoding="async" /></button>
         </div>
       </div>
     </section>
 
-    <section class="section section-location" id="location">
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+      <button class="lightbox__close" id="lb-close" aria-label="Close">&#10005;</button>
+      <button class="lightbox__prev"  id="lb-prev"  aria-label="Previous photo">&#8592;</button>
+      <button class="lightbox__next"  id="lb-next"  aria-label="Next photo">&#8594;</button>
+      <img class="lightbox__img" id="lb-img" src="" width="1600" height="1200" alt="Enlarged photo" />
+    </div>
+
+    <section class="section section-location" id="location" data-reveal>
       <div class="container split split--reverse">
         <div class="split-text">
-          <h2>In the heart of Tuscany</h2>
+          <span class="eyebrow">Where we are</span>
+          <h2>Volterra, San Gimignano, Siena, Pisa &amp; Florence</h2>
           <p>
-            Podere Grignano sits among hills and cypress-lined roads—ideal for day trips to Volterra,
-            San Gimignano, Siena, and the coast when you want a sea breeze.
+            Podere Grignano sits on a rolling Tuscan hill, surrounded by an olive grove, a cypress lane and a vineyard.
+            Distances by road:
           </p>
+          <ul class="distances">
+            <li><span>Volterra</span> <strong>17 km</strong></li>
+            <li><span>San Gimignano</span> <strong>21 km</strong></li>
+            <li><span>Siena</span> <strong>45 km</strong></li>
+            <li><span>The coast (Cecina)</span> <strong>56 km</strong></li>
+            <li><span>Florence</span> <strong>76 km</strong></li>
+            <li><span>Pisa</span> <strong>80 km</strong></li>
+          </ul>
           <address class="address">
             Podere Grignano<br />
             Tuscany, Italy
           </address>
-          <p class="location-note">
-            Add your exact address, Google Maps link, or embed when you publish.
-          </p>
         </div>
-        <div class="map-placeholder" role="img" aria-label="Map placeholder">
-          <span>Map / directions</span>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d399186.1119302038!2d10.543941897209612!3d43.49751331592641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a17f8731f366d%3A0x945782c9b8e603b4!2sPodere%20Grignano%20Di%20Guidetti%20E%20Chelli%20S.S!5e0!3m2!1snl!2snl!4v1775421979923!5m2!1snl!2snl"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Podere Grignano on Google Maps"
+          ></iframe>
         </div>
       </div>
     </section>
 
-    <section class="section section-cta" id="book">
+    <section class="section section-cta" id="book" data-reveal>
       <div class="container cta-box">
         <div class="cta-content">
+          <span class="eyebrow">Reserve</span>
           <h2>Plan your stay</h2>
           <p>
-            Tell us your dates and who’s travelling—we’ll reply within 24 hours with availability
-            and weekly rates. Minimum stay: 5 nights in high season.
+            Tell us your dates and who’s travelling, and we’ll reply with availability.<br />
+            Minimum stay: 5 nights.
           </p>
+          <h3>Prices</h3>
+          <p>Low season: €87 per night for up to 2 guests.</p>
+          <p>High season: €99 per night for up to 2 guests.</p>
+          <p>Each additional guest: €15 per person, per night.</p>
+          <p>High season dates: July and August, and from 19 December until 9 January.</p>
+          <div class="quick-contact" aria-label="Quick contact options">
+            <a class="btn btn-primary" href="tel:+393394025260">Call now</a>
+          </div>
         </div>
-        <form class="inquiry-form" action="#" method="get">
+        <form class="inquiry-form" id="inquiry-form" novalidate>
           <label>
             <span>Name</span>
             <input type="text" name="name" autocomplete="name" required />
+            <small class="field-error" data-error-for="name" hidden>Please enter your name.</small>
           </label>
           <label>
             <span>Email</span>
             <input type="email" name="email" autocomplete="email" required />
+            <small class="field-error" data-error-for="email" hidden>Please enter a valid email address.</small>
+          </label>
+          <label>
+            <span>Telephone</span>
+            <input type="tel" name="phone" autocomplete="tel" placeholder="e.g. +31 6 12345678" />
           </label>
           <label class="full-width">
             <span>Dates</span>
             <input type="text" name="dates" placeholder="e.g. 12–26 July 2026" required />
+            <small class="field-error" data-error-for="dates" hidden>Please share your preferred dates.</small>
           </label>
           <label class="full-width">
             <span>Message</span>
             <textarea name="message" rows="4" placeholder="Guests, children, special requests…"></textarea>
           </label>
-          <button type="submit" class="btn btn-primary full-width">Send inquiry</button>
-          <p class="form-hint">
-            This form is a front-end demo. Wire it to your email service or booking platform when you go live.
+          <p class="form-hint form-hint--pricing">
+            No payment is needed to send an inquiry.
           </p>
+          <button type="submit" class="btn btn-primary full-width" id="inquiry-submit">
+            Send inquiry
+          </button>
+          <p class="form-hint form-hint--pricing">
+            No advance payment needed — you can pay the full amount in cash when you arrive.
+          </p>
+
+          <div class="form-success" id="form-success" hidden>
+            <p>✓ Your email app will open with everything filled in — just hit send.</p>
+          </div>
+          <div class="form-error" id="form-error" hidden>
+            <p>Something went wrong. Email us directly at <a href="mailto:hello@poderegrignano.com">hello@poderegrignano.com</a>.</p>
+          </div>
         </form>
       </div>
     </section>
@@ -213,15 +511,17 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <strong>Podere Grignano</strong>
-        <p class="footer-tag">Holiday home · Tuscany</p>
+        <strong>Agriturismo Podere Grignano</strong>
+        <p class="footer-tag">di Stefano Guidetti e Roberta Chelli</p>
+        <p class="footer-tag">Via di Pignano 28, Volterra</p>
       </div>
       <div class="footer-links">
-        <a href="mailto:hello@poderegrignano.example">hello@poderegrignano.example</a>
-        <a href="tel:+390000000000">+39 000 000 0000</a>
+        <a href="tel:+393394025260">+39 339 402 5260 🇮🇹</a>
+        <a href="tel:+31626710336">+31 626 710 336 🇬🇧 🇫🇷 🇩🇪 🇳🇱 🇪🇸</a>
       </div>
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
